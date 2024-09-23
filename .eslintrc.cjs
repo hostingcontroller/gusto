@@ -7,5 +7,17 @@ module.exports = {
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
-  rules: {},
+  rules: {
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/ban-ts-ignore': 'off',
+    '@typescript-eslint/ban-ts-comment': 'off',
+    "@typescript-eslint/ban-types": ["error",
+      {
+        "types": {
+          "Object": false
+        },
+        "extendDefaults": true
+      }
+    ]
+  }
 };
