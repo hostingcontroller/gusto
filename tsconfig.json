@@ -3,9 +3,9 @@
     "target": "ESNext",
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "useDefineForClassFields": true,
-    "module": "CommonJS",
+    "module": "NodeNext",
     "rootDir": "./src",
-    "moduleResolution": "Node",
+    "moduleResolution": "NodeNext",
     "sourceMap": true,
     "outDir": "./dist",
     "skipLibCheck": true,
@@ -28,6 +28,7 @@
     "noImplicitThis": true,
     "alwaysStrict": true,
     "noImplicitReturns": false,
+    "allowImportingTsExtensions": true,
     "noEmit": true
   },
   "extensions": {

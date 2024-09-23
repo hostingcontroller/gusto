@@ -1,4 +1,4 @@
-import { createClient, createConfig, type Options } from './client';
+import { createClient, createConfig, type Options } from './client.ts';
 import {
   type ActiveDirectoryObjectAddActiveDirectoryUserData,
   type ActiveDirectoryObjectAddActiveDirectoryUserError,
@@ -1605,7 +1605,7 @@ import {
   VirtualMachineGetAllSnapShotsResponseTransformer,
   VirtualMachineTakeSnapShotResponseTransformer,
   VirtualMachineGetSnapShotDetailResponseTransformer,
-} from './types.gen';
+} from './types.gen.ts';
 
 export const client = createClient(createConfig());
 

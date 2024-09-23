@@ -1,4 +1,4 @@
-import * as sdk from "./sdk/services.gen";
+import * as sdk from "./sdk/services.gen.ts";
 
 // configure internal service client
 sdk.client.setConfig({

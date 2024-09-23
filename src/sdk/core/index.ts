@@ -1,4 +1,4 @@
-import type { Client, Config, RequestOptions } from './types';
+import type { Client, Config, RequestOptions } from './types.ts';
 import {
   createConfig,
   createInterceptors,
@@ -7,7 +7,7 @@ import {
   getUrl,
   mergeConfigs,
   mergeHeaders,
-} from './utils';
+} from './utils.ts';
 
 type ReqInit = Omit<RequestInit, 'body' | 'headers'> & {
   body?: any;
