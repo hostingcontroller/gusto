@@ -1,4 +1,4 @@
-import HcServiceClient from "../serviceClient/hcServiceClient.ts";
+import HcServiceClient from "../serviceClient/hcServiceClient";
 
 export async function App() {
     try {

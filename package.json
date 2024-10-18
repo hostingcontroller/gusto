@@ -2,13 +2,12 @@
   "name": "@hc/orchestrator",
   "private": true,
   "version": "0.0.11",
-  "type": "module",
+  "main": "src/app.ts",
   "scripts": {
-    "build": "npx tsc",
-    "start": "npx tsx --env-file=./testing.env ./src/app.ts",
     "dev": "nodemon",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "typecheck": "tsc --noEmit"
+    "build": "npx tsc",
+    "start": " node --env-file=./testing.env dist/app.js --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "express": "4.21.0",
@@ -26,12 +25,5 @@
     "ts-node": "10.9.2",
     "tsx": "4.19.1",
     "typescript": "5.5.3"
-  },
-  "nodemon": {
-    "watch": [
-      "."
-    ],
-    "ext": "ts",
-    "exec": "npm run start"
   }
 }

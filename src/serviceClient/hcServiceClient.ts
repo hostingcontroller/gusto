@@ -1,4 +1,4 @@
-import { hcApplicationName, hcBaseURL, hcPassword, hcUser } from "../config.ts";
+import { hcApplicationName, hcBaseURL, hcPassword, hcUser } from "../config";
 import * as hc from "hostingcontroller-sdk";
 class HcServiceClient {
 

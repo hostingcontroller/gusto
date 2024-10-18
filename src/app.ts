@@ -1,7 +1,9 @@
 import process from "node:process";
 import express, { Request, Response, Application } from "express";
-import * as routes from "./router.ts";
-import { App } from "./services/examples.ts";
+import * as routes from "./router";
+// import { App } from "./services/examples.ts";
+import opn from 'opn';
+import GustoServiceClient from "./serviceClient/gustoServiceClient";
 
 const app: Application = express();
 app.use(express.json());
@@ -31,7 +33,9 @@ process.on("SIGKILL", exitHandler);
 process.on("EXIT", exitHandler);
 process.on('uncaughtException', ()=>{})
 
-const server = app.listen(process.env.PORT, () => {
-    console.log(`Server listening on port ${process.env.PORT}`);
+app.listen(process.env.PORT, () => {
+    return console.log(`Server listening on port ${process.env.PORT}`);
 });
-App();
+
+opn(GustoServiceClient.oauthLogin())
+// App();
